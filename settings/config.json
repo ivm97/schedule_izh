@@ -1,0 +1,16 @@
+{
+	"bot_settings":{
+		"token": "somesh33433"
+	},
+	"parser_settings":{
+		"start_url":"poleteli.ru"
+	},
+	"storage_settings":{
+		"dname": "postgres",
+		"dpass": "qwerty",
+		"dport": "3418",
+		"dhost": "db",
+		"try": 15
+	}
+	
+}
