@@ -11,11 +11,7 @@ import (
 )
 
 //TODO
-<<<<<<< HEAD
-//Сделать нормально
-=======
 //Сделать нормальнo
->>>>>>> cf39bff (initial commit)
 
 func (app *application) start() {
 
@@ -131,6 +127,27 @@ func (app *application) start() {
 
 		}
 	}
+}
+
+func cityKB() tgb.ReplyKeyboardMarkup {
+	var numericKeyboard = tgb.NewReplyKeyboard(
+		tgb.NewKeyboardButtonRow(
+			tgb.NewKeyboardButton("Ижевск"),
+			tgb.NewKeyboardButton("Иркутск"),
+			tgb.NewKeyboardButton("Калининград"),
+			tgb.NewKeyboardButton("Когалым"),
+			tgb.NewKeyboardButton("Махачкала"),
+		),
+		tgb.NewKeyboardButtonRow(
+			tgb.NewKeyboardButton("Москва"),
+			tgb.NewKeyboardButton("Домодедово, Москва"),
+			tgb.NewKeyboardButton("Санкт-Петербург"),
+			tgb.NewKeyboardButton("Пулково, Санкт-Петербург"),
+			tgb.NewKeyboardButton("Сочи"),
+		),
+	)
+
+	return numericKeyboard
 }
 
 func msgBuilder(chatId int64, message string, replyTo int, kb any) tgb.MessageConfig {
